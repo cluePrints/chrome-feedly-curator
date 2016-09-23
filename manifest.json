@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Feedly curator",
+  "description": "Filter out articles which obviously do not match to your interests",
+  "icons": {
+    "16":   "images/icon16.png",
+    "48":   "images/icon48.png",
+    "128":  "images/icon128.png"
+  },
+  "version": "0.0.1",
+  "permissions": [
+    "http://*.feedly.com/i/*",
+    "https://*.feedly.com/i/*"
+  ],
+  "content_scripts": [{
+    "matches": ["https://*.feedly.com/i/*"],
+    "js": ["js/content.js"]
+  }],
+  "author": "swiftbricks.com"
+}
